@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "../../commonStyles";
+import { theme } from "../../theme";
 
-const ButtonContainer = styled.button`
-  padding: 7px 13px;
+const ButtonWrapper = styled.button`
+  padding: ${({ small }) => (small ? "5px 8px" : "7px 15px")};
   border-radius: 5px;
   background-color: ${theme.primary};
   color: #fff;
-  font-size: 17px;
   font-weight: bold;
+  font-size: ${({ small }) => (small ? "12px" : "16px")};
   outline: none;
   border: 2px solid transparent;
+  transition: all 220ms ease-in-out;
   cursor: pointer;
-  transition: all 230ms ease-in-out;
 
   &:hover {
     background-color: transparent;
@@ -21,9 +21,5 @@ const ButtonContainer = styled.button`
 `;
 
 export function Button(props) {
-  return (
-    <ButtonContainer type={props.type}>
-      {props.children || props.text}
-    </ButtonContainer>
-  );
+  return <ButtonWrapper {...props}>{props.children}</ButtonWrapper>;
 }

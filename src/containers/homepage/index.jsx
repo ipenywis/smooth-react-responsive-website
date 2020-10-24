@@ -1,18 +1,29 @@
 import React from "react";
-import styled from "styled-components/macro";
-
+import styled from "styled-components";
+import { Footer } from "../../components/footer";
+import { Marginer } from "../../components/marginer";
+import { MoreAboutSection } from "./moreAboutSection";
+import { ReviewsSection } from "./reviewsSection";
+import { ServicesSection } from "./servicesSection";
 import { TopSection } from "./topSection";
-import { WhatWeDoSection } from "./whatWeDoSection";
 
-const HomepageContainer = styled.div`
+const PageContainer = styled.div`
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 
 export function Homepage(props) {
   return (
-    <HomepageContainer>
+    <PageContainer>
       <TopSection />
-      <WhatWeDoSection />
-    </HomepageContainer>
+      <ServicesSection />
+      <Marginer direction="vertical" margin="2em" />
+      <ReviewsSection />
+      <MoreAboutSection />
+      <Marginer direction="vertical" margin="8em" />
+      <Footer />
+    </PageContainer>
   );
 }

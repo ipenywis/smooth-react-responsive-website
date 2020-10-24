@@ -1,13 +1,11 @@
-import React from "react";
-import styled from "styled-components";
+const { default: styled } = require("styled-components");
 
-const Title = styled.h1`
+export const SectionTitle = styled.h1`
   font-size: 34px;
-  font-weight: black;
+  font-weight: bold;
   color: #000;
-  margin-top: 1em;
-`;
 
-export function SectionTitle(props) {
-  return <Title>{props.children}</Title>;
-}
+  @media screen and (max-width: 480px) {
+    text-align: center;
+  }
+`;

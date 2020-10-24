@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@testing-library/jest-dom": "^4.2.4",
@@ -13,6 +14,7 @@
     "pure-react-carousel": "^1.27.5",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-responsive": "^8.1.0",
     "react-scripts": "3.4.3",
     "react-scroll": "^1.8.1",
     "styled-components": "^5.2.0"
